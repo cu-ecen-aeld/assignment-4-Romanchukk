@@ -1,6 +1,6 @@
 #!/bin/sh
 # Clean script for distclean buildroot
 
-BLRTDIR=./buildroot
+BUILDROOTDIR=./buildroot
 
-make -C ${BLRDIR} distclean
+make -C ${BUILDROOTDIR} distclean
