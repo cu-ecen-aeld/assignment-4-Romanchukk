@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        echo "Start ldd modules"
+        /usr/bin/scull_load
+        /usr/bin/module_load faulty
+        /usr/bin/module_load hello
+        ;;
+    stop)
+        echo "Stop ldd modules"
+        /usr/bin/scull_unload
+        /usr/bin/module_unload faulty
+        /usr/bin/module_unload hello
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+esac
